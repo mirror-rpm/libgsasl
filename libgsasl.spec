@@ -1,10 +1,10 @@
 Name:           libgsasl
 Version:        0.2.18 
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
-License:        LGPL     
+License:        LGPLv2+ 
 URL:            http://www.gnu.org/software/gsasl/
 Source0:        http://josefsson.org/gsasl/releases/%{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -71,12 +71,16 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Aug 2 2007 Nikolay Vladimirov <nikolat@vladimiroff.com> - 0.2.18-4
+- License tag changed
+ 
 * Tue Jun 26 2007 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.18-3
 - added NTLM support
+
 * Fri Jun 22 2007 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.18-2
 - fixed mixed-use-of-spaces-and-tabs
 - fixed timestamps for header files 
 - edited summary
+
 * Thu Jun 21 2007 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.18-1
 - initial release
-
