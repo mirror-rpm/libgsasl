@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        0.2.18 
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Aug 29 2007 Nikolay Vladimirov <nikolat@vladimiroff.com> - 0.2.18-5
+- rebuild for ppc32 selinux fix
+
 * Thu Aug 2 2007 Nikolay Vladimirov <nikolat@vladimiroff.com> - 0.2.18-4
 - License tag changed
  
