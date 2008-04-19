@@ -1,6 +1,6 @@
 Name:           libgsasl
-Version:        0.2.18 
-Release:        6%{?dist}
+Version:        0.2.25 
+Release:        1%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Apr 19 2008 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.25-1
+- new upstream release
+
 * Wed Feb 20 2008 Fedora Release Engineering <rel-eng@fedoraproject.org> - 0.2.18-6
 - Autorebuild for GCC 4.3
 
