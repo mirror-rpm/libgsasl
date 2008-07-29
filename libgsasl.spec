@@ -1,5 +1,5 @@
 Name:           libgsasl
-Version:        0.2.26 
+Version:        0.2.27 
 Release:        1%{?dist}
 Summary:        GNU SASL library 
 
@@ -71,8 +71,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Jun 3 2008 Nikolay Vladimirov <nikolay@vladimiroff.com> 0.2.26-1
-- new upstream
+* Tue Jul 29 2008 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.27-1
+- new upstream release 0.2.27
+
+* Tue Jun 3 2008 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.26-1
+- new upstream release 0.2.26
 
 * Sat Mar 29 2008 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.25-1
 - new upstream release
