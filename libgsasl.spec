@@ -1,5 +1,5 @@
 Name:           libgsasl
-Version:        0.2.27 
+Version:        0.2.29 
 Release:        1%{?dist}
 Summary:        GNU SASL library 
 
@@ -71,6 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Jan 1 2009 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.29-1
+- Rewrite to use poll instead of select.
+- Don't use poll with POLLOUT to avoid busy-waiting.
+
 * Tue Jul 29 2008 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.27-1
 - new upstream release 0.2.27
 
