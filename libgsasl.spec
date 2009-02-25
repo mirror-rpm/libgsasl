@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        0.2.29 
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Feb 25 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.2.29-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
 * Thu Jan 1 2009 Nikolay Vladimirov <nikolay@vladimiroff.com> - 0.2.29-1
 - Rewrite to use poll instead of select.
 - Don't use poll with POLLOUT to avoid busy-waiting.
