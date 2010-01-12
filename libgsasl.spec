@@ -1,17 +1,17 @@
 Name:           libgsasl
 Version:        1.4.0 
-Release:        1%{?dist}
+Release:        6%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
 License:        LGPLv2+ 
 URL:            http://www.gnu.org/software/gsasl/
-Source0:	ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
+Source0:        ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  libidn-devel
 BuildRequires:  krb5-devel
-BuildRequires: 	libntlm-devel
+BuildRequires:  libntlm-devel
 
 BuildRequires:  pkgconfig
 
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Jan 12 2010 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.4.0-6
+- Just bump the release to avoid an E-V-R bug
+
 * Tue Jan 12 2010 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.4.0-1
 - New upstream
 
