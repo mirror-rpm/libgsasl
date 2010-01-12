@@ -1,12 +1,12 @@
 Name:           libgsasl
-Version:        0.2.29 
-Release:        3%{?dist}
+Version:        1.4.0 
+Release:        1%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
 License:        LGPLv2+ 
 URL:            http://www.gnu.org/software/gsasl/
-Source0:        http://josefsson.org/gsasl/releases/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  libidn-devel
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Jan 12 2010 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.4.0-1
+- New upstream
+
 * Fri Jul 24 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.2.29-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
 
