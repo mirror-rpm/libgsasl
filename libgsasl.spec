@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        1.4.0 
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Feb 08 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.4.0-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Tue Jan 12 2010 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.4.0-6
 - Just bump the release to avoid an E-V-R bug
 
