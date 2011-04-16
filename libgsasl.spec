@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        1.6.0 
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -43,14 +43,10 @@ make %{?_smp_mflags}
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT INSTALL='install -p'
-find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
+rm -rf %{buildroot}
+make install DESTDIR=%{buildroot} INSTALL='install -p'
+find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %find_lang %{name}
-
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %post -p /sbin/ldconfig
 
@@ -71,6 +67,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Apr 16 2011 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.6.0-2
+- Remove clean section, since it's no longer required
+- Use '{buildroot}' instead of 'RPM_BUILD_ROOT'
+
 * Fri Apr 15 2011 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.6.0-1
 - New upstream release
 
