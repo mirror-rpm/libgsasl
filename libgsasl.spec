@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        1.6.0 
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -67,6 +67,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.6.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Sun Apr 16 2011 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.6.0-2
 - Remove clean section, since it's no longer required
 - Use '{buildroot}' instead of 'RPM_BUILD_ROOT'
