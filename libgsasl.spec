@@ -1,6 +1,6 @@
 Name:           libgsasl
-Version:        1.6.0 
-Release:        3%{?dist}
+Version:        1.6.1 
+Release:        1%{?dist}
 Summary:        GNU SASL library 
 
 Group:          System Environment/Libraries
@@ -67,6 +67,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Sat Jan 28 2012 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.6.1-1
+- New upstream release
+
 * Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.6.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
