@@ -1,18 +1,14 @@
 Name:           libgsasl
-Version:        1.6.1 
-Release:        2%{?dist}
+Version:        1.8.0 
+Release:        1%{?dist}
 Summary:        GNU SASL library 
-
 Group:          System Environment/Libraries
 License:        LGPLv2+ 
 URL:            http://www.gnu.org/software/gsasl/
 Source0:        ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
 BuildRequires:  libidn-devel
 BuildRequires:  krb5-devel
 BuildRequires:  libntlm-devel
-
 BuildRequires:  pkgconfig
 
 %description
@@ -21,29 +17,24 @@ and at least partial support for the CRAM-MD5, EXTERNAL,
 GSSAPI, ANONYMOUS, PLAIN, SECURID, DIGEST-MD5, LOGIN,
 and NTLM mechanisms.
 
-
 %package        devel
 Summary:        Development files for %{name}
 Group:          Development/Libraries
-Requires:       %{name} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       pkgconfig
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
-
 %prep
 %setup -q
-
 
 %build
 %configure --disable-static --disable-rpath
 make %{?_smp_mflags}
 
-
 %install
-rm -rf %{buildroot}
 make install DESTDIR=%{buildroot} INSTALL='install -p'
 find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %find_lang %{name}
@@ -52,21 +43,20 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 %postun -p /sbin/ldconfig
 
-
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %doc AUTHORS COPYING NEWS README THANKS
 %{_libdir}/libgsasl.so.*
 
 %files devel
-%defattr(-,root,root,-)
 %doc COPYING
 %{_includedir}/gsasl*
 %{_libdir}/libgsasl.so
 %{_libdir}/pkgconfig/libgsasl.pc
 
-
 %changelog
+* Sun Aug 19 2012 Tom Callaway <spot@fedoraproject.org> - 1.8.0-1
+- update to 1.8.0
+
 * Thu Jul 19 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.6.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
