@@ -75,7 +75,7 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 * Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.6.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
-* Sun Apr 16 2011 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.6.0-2
+* Sat Apr 16 2011 Nikolay Vladimirov <nikolay@vladimiroff.com> - 1.6.0-2
 - Remove clean section, since it's no longer required
 - Use '{buildroot}' instead of 'RPM_BUILD_ROOT'
 
@@ -113,7 +113,7 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 * Wed Feb 20 2008 Fedora Release Engineering <rel-eng@fedoraproject.org> - 0.2.18-6
 - Autorebuild for GCC 4.3
 
-* Thu Aug 29 2007 Nikolay Vladimirov <nikolat@vladimiroff.com> - 0.2.18-5
+* Wed Aug 29 2007 Nikolay Vladimirov <nikolat@vladimiroff.com> - 0.2.18-5
 - rebuild for ppc32 selinux fix
 
 * Thu Aug 2 2007 Nikolay Vladimirov <nikolat@vladimiroff.com> - 0.2.18-4
