@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        1.8.0 
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        GNU SASL library 
 Group:          System Environment/Libraries
 License:        LGPLv2+ 
@@ -31,7 +31,7 @@ developing applications that use %{name}.
 %setup -q
 
 %build
-%configure --disable-static --disable-rpath
+%configure --disable-static --disable-rpath --with-gssapi-impl=mit
 make %{?_smp_mflags}
 
 %install
@@ -54,6 +54,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/libgsasl.pc
 
 %changelog
+* Sat Jan 23 2016 Paul Belanger <pabelanger@redhat.com> - 1.8.0-7
+- Re-enable GSSAPI support (#1134957, #1246177)
+
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.8.0-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
