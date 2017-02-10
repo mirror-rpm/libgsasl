@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        1.8.0 
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        GNU SASL library 
 Group:          System Environment/Libraries
 License:        LGPLv2+ 
@@ -54,6 +54,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/libgsasl.pc
 
 %changelog
+* Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.8.0-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.8.0-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 
