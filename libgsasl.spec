@@ -6,6 +6,7 @@ Group:          System Environment/Libraries
 License:        LGPLv2+ 
 URL:            http://www.gnu.org/software/gsasl/
 Source0:        ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
+BuildRequires:  gcc
 BuildRequires:  libidn-devel
 BuildRequires:  krb5-devel
 BuildRequires:  libntlm-devel
