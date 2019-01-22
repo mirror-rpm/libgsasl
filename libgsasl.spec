@@ -40,9 +40,7 @@ make install DESTDIR=%{buildroot} INSTALL='install -p'
 find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %find_lang %{name}
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%ldconfig_scriptlets
 
 %files -f %{name}.lang
 %doc AUTHORS COPYING NEWS README THANKS
