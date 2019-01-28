@@ -2,7 +2,6 @@ Name:           libgsasl
 Version:        1.8.0 
 Release:        14%{?dist}
 Summary:        GNU SASL library 
-Group:          System Environment/Libraries
 License:        LGPLv2+ 
 URL:            http://www.gnu.org/software/gsasl/
 Source0:        ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
@@ -20,7 +19,6 @@ and NTLM mechanisms.
 
 %package        devel
 Summary:        Development files for %{name}
-Group:          Development/Libraries
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       pkgconfig
 
