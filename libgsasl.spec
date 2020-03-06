@@ -5,7 +5,7 @@ Summary:        GNU SASL library
 License:        LGPLv2+
 URL:            https://www.gnu.org/software/gsasl/
 Source0:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
-Source1:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz.asc
+Source1:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz.sig
 BuildRequires:  gcc
 BuildRequires:  libidn-devel
 BuildRequires:  krb5-devel
