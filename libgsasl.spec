@@ -7,8 +7,9 @@ URL:            https://www.gnu.org/software/gsasl/
 Source0:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
 Source1:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz.sig
 BuildRequires:  gcc
-BuildRequires:  libidn-devel
 BuildRequires:  krb5-devel
+BuildRequires:  libgcrypt-devel
+BuildRequires:  libidn-devel
 BuildRequires:  libntlm-devel
 BuildRequires:  pkgconfig
 
