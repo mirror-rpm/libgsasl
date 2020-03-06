@@ -1,10 +1,11 @@
 Name:           libgsasl
-Version:        1.8.0 
-Release:        17%{?dist}
-Summary:        GNU SASL library 
-License:        LGPLv2+ 
-URL:            http://www.gnu.org/software/gsasl/
-Source0:        ftp://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
+Version:        1.8.1
+Release:        1%{?dist}
+Summary:        GNU SASL library
+License:        LGPLv2+
+URL:            https://www.gnu.org/software/gsasl/
+Source0:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz
+Source1:        https://ftp.gnu.org/gnu/gsasl/%{name}-%{version}.tar.gz.asc
 BuildRequires:  gcc
 BuildRequires:  libidn-devel
 BuildRequires:  krb5-devel
@@ -27,30 +28,34 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 %prep
-%setup -q
+%autosetup
 
 %build
 %configure --disable-static --disable-rpath --with-gssapi-impl=mit
-make %{?_smp_mflags}
+%{make_build}
 
 %install
-make install DESTDIR=%{buildroot} INSTALL='install -p'
+%{make_install}
 find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %find_lang %{name}
 
 %ldconfig_scriptlets
 
 %files -f %{name}.lang
-%doc AUTHORS COPYING NEWS README THANKS
+%doc AUTHORS NEWS README THANKS
+%license COPYING COPYING.LIB
 %{_libdir}/libgsasl.so.*
 
 %files devel
-%doc COPYING
+%license COPYING COPYING.LIB
 %{_includedir}/gsasl*
 %{_libdir}/libgsasl.so
 %{_libdir}/pkgconfig/libgsasl.pc
 
 %changelog
+* Fri Mar  6 2020 Peter Lemenkov <lemenkov@gmail.com> - 1.8.1-1
+- Ver. 1.8.1
+
 * Wed Jan 29 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1.8.0-17
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
