@@ -12,6 +12,7 @@ BuildRequires:  libgcrypt-devel
 BuildRequires:  libidn-devel
 BuildRequires:  libntlm-devel
 BuildRequires:  pkgconfig
+BuildRequires: make
 
 %description
 The library includes support for the SASL framework
