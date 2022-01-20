@@ -1,6 +1,6 @@
 Name:           libgsasl
 Version:        1.10.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        GNU SASL library
 License:        LGPLv2+
 URL:            https://www.gnu.org/software/gsasl/
@@ -55,6 +55,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/libgsasl.pc
 
 %changelog
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.10.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.10.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
